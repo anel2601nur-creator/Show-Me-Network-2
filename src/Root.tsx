@@ -1,10 +1,19 @@
 import "./index.css";
-import { MyComposition } from "./Composition";
+import { Composition } from "remotion";
+import { MainEdit } from "./MainEdit";
+import { durationInFrames, fps } from "./data/scenes";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      <MyComposition />
+      <Composition
+        id="MainEdit"
+        component={MainEdit}
+        durationInFrames={durationInFrames}
+        fps={fps}
+        width={1080}
+        height={1920}
+      />
     </>
   );
 };
