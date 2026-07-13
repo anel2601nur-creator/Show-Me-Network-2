@@ -1,16 +1,16 @@
 import { Composition } from "remotion";
-import { ImpactReportScene } from "./ImpactReportScene";
-import { DURATION_IN_FRAMES, FPS } from "./timing";
+import { FullReport } from "./FullReport";
+import { DURATION_IN_FRAMES, FPS, VIDEO_HEIGHT, VIDEO_WIDTH } from "./timing";
 
 export const MyComposition = () => {
   return (
     <Composition
       id="ImpactReportScene"
-      component={ImpactReportScene}
+      component={FullReport}
       durationInFrames={DURATION_IN_FRAMES}
       fps={FPS}
-      width={1920}
-      height={1080}
+      width={VIDEO_WIDTH}
+      height={VIDEO_HEIGHT}
     />
   );
 };

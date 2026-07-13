@@ -37,7 +37,7 @@ export const StatPanel: React.FC<Props> = ({
     extrapolateRight: "clamp",
     easing: Easing.bezier(0.16, 1, 0.3, 1),
   });
-  const offset = fromSide === "left" ? -620 : 620;
+  const offset = fromSide === "left" ? -900 : 900;
   const translateX = interpolate(slideT, [0, 1], [offset, 0]);
   const opacity = interpolate(frame, [slideStart, slideStart + slideDuration * 0.65], [0, 1], {
     extrapolateLeft: "clamp",
@@ -58,8 +58,8 @@ export const StatPanel: React.FC<Props> = ({
   return (
     <div
       style={{
-        width: 560,
-        padding: "56px 48px",
+        width: 860,
+        padding: "52px 48px",
         borderRadius: 32,
         backgroundColor: COLORS.paleGreen,
         boxShadow: "0 30px 60px rgba(18, 49, 89, 0.12)",
@@ -105,7 +105,7 @@ export const StatPanel: React.FC<Props> = ({
             color: COLORS.blue,
             marginTop: 12,
             lineHeight: 1.4,
-            maxWidth: 420,
+            maxWidth: 620,
           }}
         >
           {description.map((line) => (
